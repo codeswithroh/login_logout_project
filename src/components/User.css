@@ -1,0 +1,147 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    display: grid;
+    place-items: center;
+    background: linear-gradient(to right top, purple, white);
+    overflow: hidden;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    background-color: purple;
+    padding: 2em 3em;
+    border-radius: 20px;
+    box-shadow: 0px 0px 25px 5px rgba(255, 255, 255, 0.74);
+}
+
+#forget_password {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    display: grid;
+    place-items: center;
+    z-index: 5;
+    background-color: rgba(0, 0, 0, 0.718);
+}
+
+#email,
+#password,
+#name {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    gap: 0.5em;
+}
+
+#input_email,
+#input_password,
+#enter_comment,
+#input_name,
+#forget_password_mail {
+    font-size: 1.3rem;
+    padding: 1em 2em;
+    border-radius: 100px;
+    outline: none;
+    border: none;
+}
+
+form label {
+    font-size: 2rem;
+    color: white;
+}
+
+#signup_button,
+#login_button,
+#comment_button,
+#logout {
+    padding: 0.5em 2em;
+    font-size: 1.3rem;
+    margin: auto;
+    cursor: pointer;
+    background-color: rgb(214, 45, 214);
+    border: 1px solid white;
+    color: white;
+}
+
+#forget_password_send {
+    padding: 0.5em 2em;
+    font-size: 1rem;
+    margin: auto;
+    cursor: pointer;
+    background-color: black;
+    border: 1px solid white;
+    color: white;
+}
+
+#signup_button:hover,
+#login_button:hover {
+    color: rgb(214, 45, 214);
+    background-color: white;
+    border: 1px solid rgb(214, 45, 214);
+}
+
+#login,
+#signup {
+    color: white;
+    font-size: 2.2rem;
+    border-bottom: 2px solid white;
+    text-align: center;
+}
+
+#fp {
+    color: white;
+    text-align: center;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    cursor: pointer;
+    width: 10em;
+    white-space: nowrap;
+    margin: auto;
+}
+
+#fp:hover {
+    border-bottom: 1px solid white;
+}
+
+#have_account {
+    color: white;
+}
+
+#close {
+    position: absolute;
+    top:2em;
+    right:2em;
+    color:white;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 740px) {
+
+    #input_email,
+    #input_password,
+    #enter_comment,
+    #input_name {
+        font-size: 1rem;
+    }
+
+    label {
+        font-size: 1.5rem;
+    }
+
+    button {
+        font-size: 1rem;
+    }
+}

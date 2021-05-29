@@ -1,0 +1,36 @@
+#home_background {
+    height: 100vh;
+    background: linear-gradient(to right top, black, white);
+    display: grid;
+    place-items: center;
+    position: absolute;
+    left:0;
+    right:0;
+    top:0;
+    bottom:0;
+}
+
+#logout {
+    background: black;
+}
+
+ul {
+    list-style-type: none;
+}
+
+#comment_section {
+    display: flex;
+    gap:0.5em;
+}
+
+#comments {
+    width:35em;
+    height: 15em;
+    background: white;
+    overflow-x: auto;
+    overflow-y: auto;
+}
+
+#comment_text {
+    font-size: 2rem;
+}

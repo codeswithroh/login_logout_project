@@ -1,24 +1,34 @@
-import logo from './logo.svg';
+import { useEffect, useState } from 'react';
 import './App.css';
+import fire from './config/fire';
+import SignUp from './components/SignUp';
+import { useHistory } from 'react-router-dom';
 
 function App() {
+  const [user, setUser]= useState();
+  let history= useHistory();
+
+  const authListener= () => {
+    fire.auth().onAuthStateChanged((user) => {
+      if (user) {
+        setUser(user)
+      }
+      else {
+        setUser(null)
+      }
+    })
+  }
+
+  useEffect(() => {
+    authListener()
+    return function cleanup() {
+      fire.auth().signOut();
+    }
+  },[])
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      <div className="App">
+        {user? (history.push('/login')):(<SignUp />)}
+      </div>
   );
 }
 
