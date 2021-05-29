@@ -34,7 +34,6 @@ export default function Home() {
     });
   };
 
-
   return (
     <div id='home_background'>
       <div id='comment_section'>
@@ -45,7 +44,11 @@ export default function Home() {
           value={comment}
           onChange={(e) => setComment(e.target.value)}
         ></input>
-        <button id="comment_button" type='submit' onClick={(e) => handleClick(e)}>
+        <button
+          id='comment_button'
+          type='submit'
+          onClick={(e) => handleClick(e)}
+        >
           Send
         </button>
       </div>
@@ -58,12 +61,18 @@ export default function Home() {
                 <div key={Math.random()}>
                   <ul>
                     <li id='comment_text'>
-                      {name} commented: {item}
+                      <div style={{display:"flex", gap:'1em'}}>
+                        <div id='avatar'>{name[0]}</div>
+                        <div style={{display:'flex', flexDirection:'column'}}>
+                          <div style={{fontSize:'1rem', fontWeight:'bold'}}>{name}</div>
+                          <div style={{fontSize:'1.8rem'}}>{item}</div>
+                        </div>
+                      </div>
                     </li>
                   </ul>
                 </div>
               );
-            })}{" "}
+            })}
           </div>
         ) : null}
       </div>

@@ -24,18 +24,27 @@ ul {
     gap:0.5em;
 }
 
+#avatar {
+    background-color: orange;
+    border-radius: 50%;
+    padding:0.3em 0.7em;
+    color: black;
+}
+
 #comments {
     width:35em;
     height: 15em;
     background: rgb(175, 40, 175);
     overflow-x: auto;
     overflow-y: auto;
-    padding:0.5em 1em;
+    padding:0.5em 2em;
     border-radius: 20px;
 }
 
 #comment_text {
     font-size: 2rem;
+    color:white;
+    margin-top: 0.5em;
 }
 
 @media screen and (max-width:600px) {
