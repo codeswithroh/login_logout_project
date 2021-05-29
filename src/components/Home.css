@@ -2,6 +2,7 @@
     height: 100vh;
     background: linear-gradient(to right top, black, white);
     display: grid;
+    grid-auto-rows: repeat(2,1fr);
     place-items: center;
     position: absolute;
     left:0;
@@ -26,11 +27,33 @@ ul {
 #comments {
     width:35em;
     height: 15em;
-    background: white;
+    background: rgb(175, 40, 175);
     overflow-x: auto;
     overflow-y: auto;
+    padding:0.5em 1em;
+    border-radius: 20px;
 }
 
 #comment_text {
     font-size: 2rem;
+}
+
+@media screen and (max-width:600px) {
+    #comment_section {
+        flex-direction: column;
+    }
+
+    #comments {
+        width:25em;
+    }
+}
+
+@media screen and (max-width:450px) {
+    #comment_section {
+        flex-direction: column;
+    }
+
+    #comments {
+        width:17.5em;
+    }
 }

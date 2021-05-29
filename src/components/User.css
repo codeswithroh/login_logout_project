@@ -121,9 +121,9 @@ form label {
 
 #close {
     position: absolute;
-    top:2em;
-    right:2em;
-    color:white;
+    top: 2em;
+    right: 2em;
+    color: white;
     font-size: 2rem;
     cursor: pointer;
 }
@@ -144,4 +144,35 @@ form label {
     button {
         font-size: 1rem;
     }
+
+    #comment_button {
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width: 400px) {
+
+    #input_email,
+    #input_password,
+    #enter_comment,
+    #input_name {
+        font-size: 0.8rem;
+    }
+
+    form label {
+        font-size: 1rem;
+    }
+
+    #signup_button,
+    #login_button,
+    #comment_button,
+    #logout {
+        font-size: 1rem;
+    }
+
+    form {
+        margin: 0 1em;
+        padding: 2em 2em;
+    }
+
 }
