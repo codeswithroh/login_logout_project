@@ -1,14 +1,12 @@
 #home_background {
     height: 100vh;
-    background: linear-gradient(to right top, black, white);
     display: grid;
     grid-auto-rows: repeat(2,1fr);
     place-items: center;
-    position: absolute;
-    left:0;
-    right:0;
-    top:0;
-    bottom:0;
+    background-image: url('./space.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
 }
 
 #logout {

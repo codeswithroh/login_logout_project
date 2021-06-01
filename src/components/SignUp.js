@@ -62,46 +62,49 @@ export default function SignUp() {
   };
 
   return (
-    <div>
-      <form>
-        <h1 id="signup">Sign Up</h1>
-        <div id="name">
-          <label>Name</label>
-          <input
-            type='text'
-            placeholder='Enter your name'
-            id='input_name'
-            onChange={(e) => handleNameChange(e)}
-            value={name}
-            required
-          ></input>
-        </div>
-        <div id="email">
-          <label>Email</label>
-          <input
-            type='email'
-            placeholder='Enter your email'
-            id='input_email'
-            onChange={(e) => handleEmailChange(e)}
-            value={email}
-            required
-          ></input>
-        </div>
-        <div id="password">
-          <label>Password</label>
-          <input
-            type='password'
-            placeholder='Enter your password'
-            id='input_password'
-            onChange={(e) => handlePasswordChange(e)}
-            value={password}
-            minLength="6"
-            required
-          ></input>
-        </div>
-        <button id="signup_button" onClick={(e) => signup(e)}>Sign Up</button>
-        <Link id="have_account" to='/login'>Already have an account ? Log In</Link>
-      </form>
+    <div id="signup_background">
+      <div>
+        
+        <form>
+          <h1 id="signup">Sign Up</h1>
+          <div id="name">
+            <label>Name</label>
+            <input
+              type='text'
+              placeholder='Enter your name'
+              id='input_name'
+              onChange={(e) => handleNameChange(e)}
+              value={name}
+              required
+            ></input>
+          </div>
+          <div id="email">
+            <label>Email</label>
+            <input
+              type='email'
+              placeholder='Enter your email'
+              id='input_email'
+              onChange={(e) => handleEmailChange(e)}
+              value={email}
+              required
+            ></input>
+          </div>
+          <div id="password">
+            <label>Password</label>
+            <input
+              type='password'
+              placeholder='Enter your password'
+              id='input_password'
+              onChange={(e) => handlePasswordChange(e)}
+              value={password}
+              minLength="6"
+              required
+            ></input>
+          </div>
+          <button id="signup_button" onClick={(e) => signup(e)}>Sign Up</button>
+          <Link id="have_account" to='/login'>Already have an account ? Log In</Link>
+        </form>
+      </div>
     </div>
   );
 }

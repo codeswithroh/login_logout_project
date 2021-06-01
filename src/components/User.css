@@ -4,13 +4,24 @@
     box-sizing: border-box;
 }
 
-body {
+#signup_background,
+#login_background {
     height: 100vh;
     display: grid;
     place-items: center;
     background: linear-gradient(to right top, purple, white);
     overflow: hidden;
 }
+
+#space_background {
+    height: 100vh;
+    display: grid;
+    place-items: center;
+    background-color: black;
+    overflow: hidden;
+    width: 100%;
+}
+
 
 form {
     display: flex;
@@ -173,6 +184,17 @@ form label {
     form {
         margin: 0 1em;
         padding: 2em 2em;
+    }
+
+    #space {
+        right: 0em;
+        left:0em;
+    }
+
+    iframe {
+        width: 20em;
+        height:10em;
+        margin:0 1em;
     }
 
 }
